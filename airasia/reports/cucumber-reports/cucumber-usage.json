@@ -1,0 +1,276 @@
+[
+  {
+    "source": "User is on Landing Page",
+    "steps": [
+      {
+        "name": "User is on Landing Page",
+        "aggregatedDurations": {
+          "median": 2.164196800,
+          "average": 2.164196800
+        },
+        "durations": [
+          {
+            "duration": 3.4967699,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:8"
+          },
+          {
+            "duration": 0.8316237,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "User selects Flights menu item on search widget",
+    "steps": [
+      {
+        "name": "User selects Flights menu item on search widget",
+        "aggregatedDurations": {
+          "median": 1.0966057,
+          "average": 1.096605700
+        },
+        "durations": [
+          {
+            "duration": 1.0966057,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Enter from location {string}",
+    "steps": [
+      {
+        "name": "Enter from location \"Kuala Lumpur (KUL)\"",
+        "aggregatedDurations": {
+          "median": 1.4189319,
+          "average": 1.418931900
+        },
+        "durations": [
+          {
+            "duration": 1.4189319,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Enter to location {string}",
+    "steps": [
+      {
+        "name": "Enter to location \"Chennai (MAA)\"",
+        "aggregatedDurations": {
+          "median": 1.0588002,
+          "average": 1.058800200
+        },
+        "durations": [
+          {
+            "duration": 1.0588002,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Select depart date {string}",
+    "steps": [
+      {
+        "name": "Select depart date \"19/07/2020\"",
+        "aggregatedDurations": {
+          "median": 0.8832786,
+          "average": 0.883278600
+        },
+        "durations": [
+          {
+            "duration": 0.8832786,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Select return date {string}",
+    "steps": [
+      {
+        "name": "Select return date \"22/07/2020\"",
+        "aggregatedDurations": {
+          "median": 0.8701946,
+          "average": 0.870194600
+        },
+        "durations": [
+          {
+            "duration": 0.8701946,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Click confrim on date picker",
+    "steps": [
+      {
+        "name": "Click confrim on date picker",
+        "aggregatedDurations": {
+          "median": 0.2040324,
+          "average": 0.204032400
+        },
+        "durations": [
+          {
+            "duration": 0.2040324,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Click search",
+    "steps": [
+      {
+        "name": "Click search",
+        "aggregatedDurations": {
+          "median": 0.2664002,
+          "average": 0.266400200
+        },
+        "durations": [
+          {
+            "duration": 0.2664002,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Search results with user selected {string}, {string} are displayed",
+    "steps": [
+      {
+        "name": "Search results with user selected \"Kuala Lumpur (KUL)\", \"Chennai (MAA)\" are displayed",
+        "aggregatedDurations": {
+          "median": 4.7162252,
+          "average": 4.716225200
+        },
+        "durations": [
+          {
+            "duration": 4.7162252,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "User clicks on BIG Login",
+    "steps": [
+      {
+        "name": "User clicks on BIG Login",
+        "aggregatedDurations": {
+          "median": 2.2890514,
+          "average": 2.289051400
+        },
+        "durations": [
+          {
+            "duration": 2.2890514,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Login with {string} and password {string}",
+    "steps": [
+      {
+        "name": "Login with \"signinairasia@gmail.com\" and password \"Bonpi71021\"",
+        "aggregatedDurations": {
+          "median": 1.1688203,
+          "average": 1.168820300
+        },
+        "durations": [
+          {
+            "duration": 1.1688203,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Verify account name {string}is displayed",
+    "steps": [
+      {
+        "name": "Verify account name \"Signin\"is displayed",
+        "aggregatedDurations": {
+          "median": 1.7556151,
+          "average": 1.755615100
+        },
+        "durations": [
+          {
+            "duration": 1.7556151,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Click on account profile name {string}",
+    "steps": [
+      {
+        "name": "Click on account profile name \"Signin\"",
+        "aggregatedDurations": {
+          "median": 0.2114833,
+          "average": 0.211483300
+        },
+        "durations": [
+          {
+            "duration": 0.2114833,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Click logout",
+    "steps": [
+      {
+        "name": "Click logout",
+        "aggregatedDurations": {
+          "median": 0.1439482,
+          "average": 0.143948200
+        },
+        "durations": [
+          {
+            "duration": 0.1439482,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:29"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Verify logout is successful",
+    "steps": [
+      {
+        "name": "Verify logout is successful",
+        "aggregatedDurations": {
+          "median": 0.0453333,
+          "average": 0.045333300
+        },
+        "durations": [
+          {
+            "duration": 0.0453333,
+            "location": "file:src/test/resources/features/searchaddupdateproduct.feature:30"
+          }
+        ]
+      }
+    ]
+  }
+]
