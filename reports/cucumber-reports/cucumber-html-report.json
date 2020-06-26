@@ -1,0 +1,355 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2020-06-26T19:20:56.660Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.airasia.framework.base.DriverManager.getDriverFor(DriverManager.java:57)\r\n\tat com.airasia.framework.base.DriverManager.launchApplication(DriverManager.java:43)\r\n\tat com.airasia.stepdefinitions.Hooks.beforeScenario(Hooks.java:16)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat com.airasia.framework.base.CucumberFeatureManager.runScenario(CucumberFeatureManager.java:47)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\r\n\tat org.testng.TestRunner.run(TestRunner.java:505)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)\r\n",
+              "duration": 1816100,
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Search for flight as a guest user",
+        "description": "",
+        "id": "verify-airasia-login-and-flight-search-functionalities;search-for-flight-as-a-guest-user;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 35500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5500,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User is on Landing Page",
+            "match": {
+              "location": "LandingPageStepDefinitions.is_on_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2300,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User selects Flights menu item on search widget",
+            "match": {
+              "location": "LandingPageStepDefinitions.user_selects_Flights_menu_item_on_search_widget()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Enter from location \"Kuala Lumpur (KUL)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kuala Lumpur (KUL)\"",
+                  "offset": 20
+                }
+              ],
+              "location": "LandingPageStepDefinitions.enterFromLocation(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1900,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Enter to location \"Chennai (MAA)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Chennai (MAA)\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LandingPageStepDefinitions.enterToLocation(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1900,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Select depart date \"19/07/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"19/07/2020\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LandingPageStepDefinitions.selectDepartDate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2300,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Select return date \"22/07/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"22/07/2020\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LandingPageStepDefinitions.selectReturnDate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1800,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Click confrim on date picker",
+            "match": {
+              "location": "LandingPageStepDefinitions.clickConfrimOnDatePicker()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1900,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Click search",
+            "match": {
+              "location": "LandingPageStepDefinitions.clickSearch()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1800,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "Search results with user selected \"Kuala Lumpur (KUL)\", \"Chennai (MAA)\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kuala Lumpur (KUL)\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Chennai (MAA)\"",
+                  "offset": 56
+                }
+              ],
+              "location": "FlightSelectionPageStepDefinitions.searchResultsWithUserSelectedAreDisplayed(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFlight"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2020-06-26T19:20:56.669Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.airasia.framework.base.DriverManager.getDriverFor(DriverManager.java:57)\r\n\tat com.airasia.framework.base.DriverManager.launchApplication(DriverManager.java:43)\r\n\tat com.airasia.stepdefinitions.Hooks.beforeScenario(Hooks.java:16)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat com.airasia.framework.base.CucumberFeatureManager.runScenario(CucumberFeatureManager.java:47)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\r\n\tat org.testng.TestRunner.run(TestRunner.java:505)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)\r\n",
+              "duration": 98500,
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Login to AirAsia and verify Account Settings",
+        "description": "",
+        "id": "verify-airasia-login-and-flight-search-functionalities;login-to-airasia-and-verify-account-settings;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 12100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3500,
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "User is on Landing Page",
+            "match": {
+              "location": "LandingPageStepDefinitions.is_on_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3200,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "User clicks on BIG Login",
+            "match": {
+              "location": "LandingPageStepDefinitions.userClicksOnBIGLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5000,
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "Login with \"signinairasia@gmail.com\" and password \"Bonpi71021\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"signinairasia@gmail.com\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Bonpi71021\"",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginStepDefinitions.loginWithAndPassword(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3200,
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "Verify account name \"Signin\"is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Signin\"",
+                  "offset": 20
+                }
+              ],
+              "location": "LandingPageStepDefinitions.verifyAccountNameIsDisplayed(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3400,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "Click on account profile name \"Signin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Signin\"",
+                  "offset": 30
+                }
+              ],
+              "location": "LandingPageStepDefinitions.clickOnAccountProfileName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3300,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Click logout",
+            "match": {
+              "location": "LandingPageStepDefinitions.clickLogout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3200,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "Verify logout is successful",
+            "match": {
+              "location": "LandingPageStepDefinitions.verifyLogoutIsSuccessful()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginAndLogout"
+          }
+        ]
+      }
+    ],
+    "name": "verify AirAsia Login and flight search functionalities",
+    "description": "",
+    "id": "verify-airasia-login-and-flight-search-functionalities",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/searchaddupdateproduct.feature",
+    "tags": []
+  }
+]
