@@ -1,6 +1,8 @@
 package com.airasia.framework.base;
 
 import com.airasia.framework.support.io.PropertiesFile;
+import com.google.common.util.concurrent.Uninterruptibles;
+import io.cucumber.core.api.Scenario;
 import io.cucumber.testng.CucumberFeatureWrapper;
 import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
@@ -8,14 +10,15 @@ import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.presentation.PresentationMode;
 import net.masterthought.cucumber.sorting.SortingMethod;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Base for cucumber runner Picks up all options which are mentioned in cucumber
@@ -29,6 +32,14 @@ public class CucumberFeatureManager extends DriverManager {
 	@BeforeClass
 	public void setUpClass() {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+	}
+
+	@BeforeSuite
+	public void initialDelay(){
+		//intentionally added this as chrome/firefox containers take few ms to register
+		//to hub - test fails saying hub does not have node!!
+		//very rare
+		Uninterruptibles.sleepUninterruptibly(2, TimeUnit.SECONDS);
 	}
 
 	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
@@ -50,11 +61,10 @@ public class CucumberFeatureManager extends DriverManager {
 		String path = System.getProperty("user.dir") + "/src/main/java/com/airasia";
 		PropertiesFile propFile = new PropertiesFile(path + "/config/reportconfig.properties");
 		String buildNumber = propFile.getProperty("BuildNumber");
-		String projectName = "AmazonWebShop";
+		String projectName = "airasia";
 		Configuration configuration = new Configuration(reportOutputDirectory, projectName);
 		configuration.setBuildNumber(buildNumber);
 		configuration.addClassifications("Execution", propFile.getProperty("Execution"));
-		//configuration.addClassifications("OS", propFile.getProperty("OS"));
 		configuration.setSortingMethod(SortingMethod.NATURAL);
 		configuration.addPresentationModes(PresentationMode.EXPAND_ALL_STEPS);
 		configuration.setTrendsStatsFile(new File("target/test-classes/featurebuildtrends.json"));

@@ -7,6 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -24,9 +25,9 @@ import java.util.concurrent.TimeUnit;
 public class DriverManager{
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static String browser;
+	private static String host;
 	public static String baseDir = System.getProperty("user.dir");
 	private static PropertiesFile envConfig;
-	Logger logger;
 	/**
 	 * This function launches browser based on browser name given in config
 	 * properties file.
@@ -36,7 +37,9 @@ public class DriverManager{
 		if(envConfig==null) {
 			envConfig=new PropertiesFile(path+"config//config.properties");
 		}
-		browser = envConfig.getProperty("browserName");
+		browser = System.getProperty("BROWSER");
+		//browser = "localchrome";
+		host = System.getProperty("HUB_HOST");
 		driver.set(getDriverFor(browser));
 		getDriver().manage().window().maximize();
 		getDriver().manage().deleteAllCookies();
@@ -52,7 +55,7 @@ public class DriverManager{
 	 */
 	private WebDriver getDriverFor(String brName) throws MalformedURLException {
 		switch (brName.toLowerCase()) {
-		case "chrome":
+		case "localchrome":
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized");
 			options.addArguments("disable-infobars");
@@ -66,17 +69,23 @@ public class DriverManager{
 			options.addArguments("--disable-notifications");
 			WebDriverManager.chromedriver().setup();
 			return new ChromeDriver(options);
-		case "firefox":
+		case "localfirefox":
 			WebDriverManager.firefoxdriver().setup();
 			return new FirefoxDriver();
-		case "dockerchrome":
+		case "chrome":
 			options = new ChromeOptions();
-			URL url = new URL("http://localhost:4444/wd/hub");
+			URL url = new URL("http://"+host+":4444/wd/hub");
 			RemoteWebDriver driver = new RemoteWebDriver(url,options);
 			driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			return driver;
+		case "firefox":
+				FirefoxOptions options1 = new FirefoxOptions();
+				url = new URL("http://"+host+":4444/wd/hub");
+				driver = new RemoteWebDriver(url,options1);
+				driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+				return driver;
 		default:
-			Logger.getLogger(DriverManager.class).error("Browser is not found with specified name");
+			Logger.getLogger(DriverManager.class).error("Browser is not found with specified name, allowed options are chrome, firefox, localchrome, localfirefox");
 			return null;
 		}
 	}

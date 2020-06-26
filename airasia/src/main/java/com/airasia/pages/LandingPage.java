@@ -90,6 +90,6 @@ public class LandingPage extends BasePage{
 
 	public void verifyLogoutIsSuccessful(){
 		DriverWait.isElementDisplayed(signInButton, WaitTime.ONEMINUTE);
-		logger.info("Logout is successful");
+		logger.info("Logout is successful - Test Passed");
 	}
 }

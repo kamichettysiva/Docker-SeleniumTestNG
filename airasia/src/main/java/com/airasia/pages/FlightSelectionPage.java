@@ -27,6 +27,7 @@ public class FlightSelectionPage extends BasePage{
 		String fromCity = city1.split("\\(")[0].trim();
 		String toCity = city2.split("\\(")[0].trim();
 		Assert.assertTrue(DriverWait.isElementDisplayed(By.xpath("//*[@id='wcaMainContent']/h1[text()='"+flightType+"']/../h2[text()=' "+fromCity+" to "+toCity+" ']"),WaitTime.ONEMINUTE),"Flight Selection page is not loaded");
+		logger.info( flightType + " flight results are loaded");
 	}
 
 }
