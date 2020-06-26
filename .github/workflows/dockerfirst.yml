@@ -15,5 +15,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |
-        pwd
-        ls -ltr
+        docker-compose -f airasia/docker-compose.yml up
