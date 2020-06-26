@@ -16,7 +16,7 @@ services:
     environment:
       - HUB_HOST=selenium-hub
   search-module:
-    image: kamichettysiva/dockertest:1.0
+    image: kamichettysiva/dockertest:latest
     container_name: airasia-login-search
     depends_on:
       - firefox
