@@ -3,7 +3,7 @@ Docker-SeleniumTestNG is a sample Java-Selenium automated test suite using Maven
 
 - Pull the Docker-SeleniumTestNG project to your local machine and open in your favourite IDE
 - Update the src class files, cucumber feature files etc to suite your automation needs (i.e Add Test Cases, Add Dependencies to pom.xml, update the Dockerfile to add all the project files that are needed to run your TestNG suite on a docker image), for exploring purpose you can use this repo as is
-- Ensure all the dependencies are download in pom.xml and there are no errors
+- Ensure all the dependencies are downloaded in pom.xml and there are no errors
 
 ```
 FROM openjdk:8-jre-slim
@@ -18,7 +18,7 @@ ADD  target/test-classes target/test-classes
 ENTRYPOINT java -cp airasia-docker.jar:airasia-docker-tests.jar:libs/* -DHUB_HOST=$HUB_HOST -DBROWSER=$BROWSER org.testng.TestNG $MODULE
 ```
 
-**FROM** As we need jre to run our jar files files, we are building the docker on image that has jre installed already</br>
+**FROM** As we need jre to run our jar files, we are building the docker on image that has jre installed already</br>
 **WORKDIR** This can be any path, consider all the files will be copied to this location inside the docker image </br>
 **ADD** This is to add all the dependent files to run your automation suite. The statement __*ADD  target/libs libs*__ means libs directory in your local **$PRODRIR/target** will be copied to **/usr/share/tag/libs** inside the docker image </br>
 __*airasia-docker.jar,airasia-docker-tests.jar, libs directory and airasia-sample-tests.xml*__ *are mandatory files. Rest all depends on the config files your automataion suite is trying to access during run time that are not part of packaged jars*</br>
