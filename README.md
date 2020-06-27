@@ -23,7 +23,7 @@ ENTRYPOINT java -cp airasia-docker.jar:airasia-docker-tests.jar:libs/* -DHUB_HOS
 **ADD** This is to add all the dependent files to run your automation suite. The statement __*ADD  target/libs libs*__ means libs directory in your local **$PRODRIR/target** will be copied to **/usr/share/tag/libs** inside the docker image </br>
 __*airasia-docker.jar,airasia-docker-tests.jar, libs directory and airasia-sample-tests.xml*__ *are mandatory files. Rest all depends on the config files that your automataion suite is trying to access during run time that are not part of packaged jars*</br>
 **ENTRYPOINT** This is the command line to run your TestNG suite. Here we specify the -cp (classpaths) to java that are needed to run the test and pass the **HUB_HOST, BROWSER and TestNG xml suite file/s** as auguments</br> 
-- Once all the above steps are taken care, either in your IDE or open terminal, navigate to your project directroy where pom.xml is located and run below command </br>
+- Once all the above steps are taken care, run the below command in your IDE or from the terminal </br>
 
 ````
 mvn clean package -DskipTests
