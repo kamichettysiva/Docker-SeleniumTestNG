@@ -19,7 +19,7 @@ ENTRYPOINT java -cp airasia-docker.jar:airasia-docker-tests.jar:libs/* -DHUB_HOS
 ```
 
 **FROM** As we need jre to run our jar files, we are building the docker on image that has jre installed already</br>
-**WORKDIR** This can be any path, consider all the files will be copied to this location inside the docker image </br>
+**WORKDIR** This can be any path, Ideally the files from your local directory will be copied to this location in docker image when we run ADD command</br>
 **ADD** This is to add all the dependent files to run your automation suite. The statement __*ADD  target/libs libs*__ means libs directory in your local **$PRODRIR/target** will be copied to **/usr/share/tag/libs** inside the docker image </br>
 __*airasia-docker.jar,airasia-docker-tests.jar, libs directory and airasia-sample-tests.xml*__ *are mandatory files. Rest all depends on the config files your automataion suite is trying to access during run time that are not part of packaged jars*</br>
 **ENTRYPOINT** This is the command line to run your TestNG suite. We are specifying the -cp (classpaths) to java that are needed to run the test and passing the **HUB_HOST, BROWSER and TestNG xml suite file/s** as auguments</br> 
