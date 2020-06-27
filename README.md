@@ -29,7 +29,7 @@ __*airasia-docker.jar,airasia-docker-tests.jar, libs directory and airasia-sampl
 mvn clean package -DskipTests
 ````
 - mvn clean package will create *airasia-docker.jar, airasia-docker-tests.jar and libs* in **$PRODRIR/target** directory
-- We are using *-DskipTests* as we don't have to run tests in local while packaging the jars however you can run the tests before packaging to ensure that there are no failures 
+- We are using *-DskipTests* as we don't have to run tests in local while packaging the jars, however you can run the tests before packaging to ensure that there are no failures 
 - Once the required jars are generated in the target folder, push the project to your github repository
 
 ### TIP:
@@ -52,7 +52,7 @@ Now create a GitHub workflow action to build your docker image and push it to do
 ### Steps to create GitHub workflow action:
 - Open your project in GitHub and click on actions
 - Under workflow, Click on new workflow
-- Click on Setup this workflow, an yml file with default template will be opened, Paste the below code in the file
+- Click on Setup this workflow, a .yml file with default template will be opened, Paste the below code snippet in the file
 
 ````
 name: AirAsia create and push docker-image to docker hub
