@@ -3,7 +3,7 @@
 <suite name="search and Login-module" parallel="none" allow-return-values="true" >
   <test name="search and login -test">
     <classes>
-      <class name="com.airasia.runner.SuiteRunner"/>
+      <class name="com.pragra.runner.SuiteRunner"/>
     </classes>
   </test>
 </suite>

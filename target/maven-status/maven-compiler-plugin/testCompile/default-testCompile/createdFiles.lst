@@ -1,5 +1,0 @@
-com\airasia\stepdefinitions\FlightSelectionPageStepDefinitions.class
-com\airasia\stepdefinitions\LoginStepDefinitions.class
-com\airasia\stepdefinitions\LandingPageStepDefinitions.class
-com\airasia\runner\SuiteRunner.class
-com\airasia\stepdefinitions\Hooks.class
